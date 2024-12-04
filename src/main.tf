@@ -10,7 +10,7 @@ locals {
 
 module "api_gateway_rest_api" {
   source  = "cloudposse/api-gateway/aws"
-  version = "0.3.1"
+  version = "0.7.1"
 
   enabled = local.enabled
 
