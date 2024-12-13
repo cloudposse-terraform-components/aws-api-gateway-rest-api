@@ -5,7 +5,7 @@ tags:
   - provider/aws
 ---
 
-# Component: `api`
+# Component: `api-gateway-rest-api`
 
 This component is responsible for deploying an API Gateway REST API.
 
