@@ -5,3 +5,4 @@ repository:
   description: This component is responsible for deploying an API Gateway REST API
   homepage: https://cloudposse.com/accelerate
   topics: terraform, terraform-component
+
