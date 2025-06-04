@@ -1,6 +1,6 @@
 module "nlb" {
   source  = "cloudposse/nlb/aws"
-  version = "0.18.1"
+  version = "0.18.2"
   count   = var.enable_private_link_nlb ? 1 : 0
 
   enabled = local.enabled
