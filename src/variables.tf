@@ -39,6 +39,12 @@ variable "metrics_enabled" {
   default     = true
 }
 
+variable "data_trace_enabled" {
+  description = "Whether data trace logging is enabled for this method, which effects the log entries pushed to Amazon CloudWatch Logs."
+  type        = bool
+  default     = false
+}
+
 variable "xray_tracing_enabled" {
   description = "A flag to indicate whether to enable X-Ray tracing."
   type        = bool
