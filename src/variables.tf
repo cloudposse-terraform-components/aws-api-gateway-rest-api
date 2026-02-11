@@ -40,7 +40,7 @@ variable "metrics_enabled" {
 }
 
 variable "data_trace_enabled" {
-  description = "Whether data trace logging is enabled for this method, which effects the log entries pushed to Amazon CloudWatch Logs."
+  description = "Whether data trace logging is enabled for this method, which affects the log entries pushed to Amazon CloudWatch Logs. WARNING: This logs full request/response data to CloudWatch and should not be enabled in production if sensitive data may be present in API payloads."
   type        = bool
   default     = false
 }
