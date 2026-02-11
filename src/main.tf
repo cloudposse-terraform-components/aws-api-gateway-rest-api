@@ -18,6 +18,7 @@ module "api_gateway_rest_api" {
   endpoint_type            = var.endpoint_type
   logging_level            = var.logging_level
   metrics_enabled          = var.metrics_enabled
+  data_trace_enabled       = var.data_trace_enabled
   xray_tracing_enabled     = var.xray_tracing_enabled
   access_log_format        = var.access_log_format
   rest_api_policy          = var.rest_api_policy
