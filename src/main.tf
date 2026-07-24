@@ -10,7 +10,7 @@ locals {
 
 module "api_gateway_rest_api" {
   source  = "cloudposse/api-gateway/aws"
-  version = "0.9.0"
+  version = "0.9.1"
 
   enabled = local.enabled
 
@@ -26,6 +26,7 @@ module "api_gateway_rest_api" {
   stage_name               = var.stage_name
   throttling_burst_limit   = var.throttling_burst_limit
   throttling_rate_limit    = var.throttling_rate_limit
+  retention_in_days        = var.retention_in_days
 
   context = module.this.context
 }

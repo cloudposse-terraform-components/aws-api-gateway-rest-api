@@ -51,6 +51,12 @@ variable "xray_tracing_enabled" {
   default     = true
 }
 
+variable "retention_in_days" {
+  description = "Number of days to retain the API Gateway access-log CloudWatch group. Defaults to the upstream module default of 30."
+  type        = number
+  default     = 30
+}
+
 # See https://docs.aws.amazon.com/apigateway/latest/developerguide/set-up-logging.html for additional information
 # on how to configure logging.
 variable "access_log_format" {
