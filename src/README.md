@@ -51,32 +51,26 @@ components:
 ## Requirements
 
 | Name | Version |
-|------|---------|
+| ---- | ------- |
 | <a name="requirement_terraform"></a> [terraform](#requirement\_terraform) | >= 1.0.0 |
 | <a name="requirement_aws"></a> [aws](#requirement\_aws) | >= 4.0, < 6.0.0 |
-
-## Providers
-
-| Name | Version |
-|------|---------|
-| <a name="provider_aws"></a> [aws](#provider\_aws) | >= 4.0, < 6.0.0 |
 
 ## Modules
 
 | Name | Source | Version |
-|------|--------|---------|
-| <a name="module_acm"></a> [acm](#module\_acm) | cloudposse/stack-config/yaml//modules/remote-state | 1.8.0 |
-| <a name="module_api_gateway_rest_api"></a> [api\_gateway\_rest\_api](#module\_api\_gateway\_rest\_api) | cloudposse/api-gateway/aws | 0.9.0 |
-| <a name="module_dns_delegated"></a> [dns\_delegated](#module\_dns\_delegated) | cloudposse/stack-config/yaml//modules/remote-state | 1.8.0 |
+| ---- | ------ | ------- |
+| <a name="module_acm"></a> [acm](#module\_acm) | cloudposse/stack-config/yaml//modules/remote-state | 2.0.1 |
+| <a name="module_api_gateway_rest_api"></a> [api\_gateway\_rest\_api](#module\_api\_gateway\_rest\_api) | cloudposse/api-gateway/aws | 0.9.1 |
+| <a name="module_dns_delegated"></a> [dns\_delegated](#module\_dns\_delegated) | cloudposse/stack-config/yaml//modules/remote-state | 2.0.1 |
 | <a name="module_iam_roles"></a> [iam\_roles](#module\_iam\_roles) | ../account-map/modules/iam-roles | n/a |
 | <a name="module_nlb"></a> [nlb](#module\_nlb) | cloudposse/nlb/aws | 0.18.2 |
 | <a name="module_this"></a> [this](#module\_this) | cloudposse/label/null | 0.25.0 |
-| <a name="module_vpc"></a> [vpc](#module\_vpc) | cloudposse/stack-config/yaml//modules/remote-state | 1.8.0 |
+| <a name="module_vpc"></a> [vpc](#module\_vpc) | cloudposse/stack-config/yaml//modules/remote-state | 2.0.1 |
 
 ## Resources
 
 | Name | Type |
-|------|------|
+| ---- | ---- |
 | [aws_api_gateway_base_path_mapping.this](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/api_gateway_base_path_mapping) | resource |
 | [aws_api_gateway_domain_name.this](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/api_gateway_domain_name) | resource |
 | [aws_route53_record.this](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/route53_record) | resource |
@@ -86,7 +80,7 @@ components:
 ## Inputs
 
 | Name | Description | Type | Default | Required |
-|------|-------------|------|---------|:--------:|
+| ---- | ----------- | ---- | ------- | :------: |
 | <a name="input_access_log_format"></a> [access\_log\_format](#input\_access\_log\_format) | The format of the access log file. | `string` | `"  {\n  \"requestTime\": \"$context.requestTime\",\n  \"requestId\": \"$context.requestId\",\n  \"httpMethod\": \"$context.httpMethod\",\n  \"path\": \"$context.path\",\n  \"resourcePath\": \"$context.resourcePath\",\n  \"status\": $context.status,\n  \"responseLatency\": $context.responseLatency,\n  \"xrayTraceId\": \"$context.xrayTraceId\",\n  \"integrationRequestId\": \"$context.integration.requestId\",\n  \"functionResponseStatus\": \"$context.integration.status\",\n  \"integrationLatency\": \"$context.integration.latency\",\n  \"integrationServiceStatus\": \"$context.integration.integrationStatus\",\n  \"authorizeResultStatus\": \"$context.authorize.status\",\n  \"authorizerServiceStatus\": \"$context.authorizer.status\",\n  \"authorizerLatency\": \"$context.authorizer.latency\",\n  \"authorizerRequestId\": \"$context.authorizer.requestId\",\n  \"ip\": \"$context.identity.sourceIp\",\n  \"userAgent\": \"$context.identity.userAgent\",\n  \"principalId\": \"$context.authorizer.principalId\",\n  \"cognitoUser\": \"$context.identity.cognitoIdentityId\",\n  \"user\": \"$context.identity.user\"\n}\n"` | no |
 | <a name="input_additional_tag_map"></a> [additional\_tag\_map](#input\_additional\_tag\_map) | Additional key-value pairs to add to each map in `tags_as_list_of_maps`. Not added to `tags` or `id`.<br/>This is for some rare cases where resources want additional configuration of tags<br/>and therefore take a list of maps with tag key, value, and additional configuration. | `map(string)` | `{}` | no |
 | <a name="input_attributes"></a> [attributes](#input\_attributes) | ID element. Additional attributes (e.g. `workers` or `cluster`) to add to `id`,<br/>in the order they appear in the list. New attributes are appended to the<br/>end of the list. The elements of the list are joined by the `delimiter`<br/>and treated as a single ID element. | `list(string)` | `[]` | no |
@@ -126,7 +120,7 @@ components:
 ## Outputs
 
 | Name | Description |
-|------|-------------|
+| ---- | ----------- |
 | <a name="output_arn"></a> [arn](#output\_arn) | The ARN of the REST API |
 | <a name="output_created_date"></a> [created\_date](#output\_created\_date) | The date the REST API was created |
 | <a name="output_execution_arn"></a> [execution\_arn](#output\_execution\_arn) | The execution ARN part to be used in lambda\_permission's source\_arn when allowing API Gateway to invoke a Lambda<br/>    function, e.g., arn:aws:execute-api:eu-west-2:123456789012:z4675bid1j, which can be concatenated with allowed stage,<br/>    method and resource path.The ARN of the Lambda function that will be executed. |
